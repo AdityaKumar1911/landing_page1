@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedElement delay={100}>
-            <span className="inline-block px-4 py-1 bg-purple-500/10 text-purple-500 dark:text-purple-400 rounded-full text-sm font-medium mb-4">Free 2-Hour Live Workshop</span>
+            <span className="inline-block px-4 py-1 bg-purple-500/10 text-purple-500 dark:text-purple-400 rounded-full text-sm font-medium mb-4">2-Hour Live Workshop</span>
           </AnimatedElement>
           
           <AnimatedElement delay={200}>
