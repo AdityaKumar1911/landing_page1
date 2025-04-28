@@ -1,4 +1,4 @@
-import { Check, Film, Lightbulb, Video, Users, Gift, Award } from 'lucide-react';
+import { Check, Film, Lightbulb, Video, Users, Gift, Award, Palette, Zap, BookOpen, Briefcase } from 'lucide-react';
 import { AnimatedElement } from './AnimatePresence';
 
 const Features = () => {
@@ -30,6 +30,13 @@ const Features = () => {
     }
   ];
 
+  const expertiseAreas = [
+    { icon: <Palette className="h-5 w-5 text-purple-500" />, text: "AI Direction" },
+    { icon: <Zap className="h-5 w-5 text-purple-500" />, text: "Visual Effects" },
+    { icon: <BookOpen className="h-5 w-5 text-purple-500" />, text: "Storytelling" },
+    { icon: <Briefcase className="h-5 w-5 text-purple-500" />, text: "Technical Innovation" }
+  ];
+
   return (
     <section id="features" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -42,7 +49,7 @@ const Features = () => {
             </p>
           </div>
         </AnimatedElement>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <AnimatedElement key={index} delay={100 * (index + 1)}>
@@ -57,14 +64,150 @@ const Features = () => {
           ))}
         </div>
 
-        <AnimatedElement delay={700} className="mt-16">
+        {/* Image Section */}
+        <AnimatedElement delay={600} className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="relative overflow-hidden rounded-xl aspect-video">
+              <img 
+                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="AI-powered video editing" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-video">
+              <img 
+                src="https://images.pexels.com/photos/2773498/pexels-photo-2773498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Creative filmmaking process" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </AnimatedElement>
+
+        {/* No Experience Required Section */}
+        <AnimatedElement delay={700} className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6">No Experience Required</h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                Start your journey into AI-powered filmmaking regardless of your current skill level. Our workshop is designed to guide you from the basics to advanced techniques.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <Check className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                  <span>Step-by-step guidance for beginners</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                  <span>Hands-on practice with real tools</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                  <span>Interactive learning environment</span>
+                </li>
+              </ul>
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Learning filmmaking" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </AnimatedElement>
+
+        {/* Additional Image Section */}
+        <AnimatedElement delay={750} className="mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative overflow-hidden rounded-xl aspect-video md:aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Creative process" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-video md:aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Video production" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-video md:aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Content creation" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </AnimatedElement>
+
+        {/* Exclusive Bonuses Preview */}
+        <AnimatedElement delay={800} className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 relative overflow-hidden rounded-xl aspect-square">
+              <img 
+                src="https://images.pexels.com/photos/7147854/pexels-photo-7147854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Workshop bonuses" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h3 className="text-3xl font-bold mb-6">Exclusive Bonuses</h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                Get additional resources worth ₹5,000 completely free with your workshop registration. Accelerate your learning with our carefully curated bonus materials.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <Gift className="h-6 w-6 text-purple-500 mr-3 mt-1" />
+                  <span>AI Tools eBook (Worth ₹2,000)</span>
+                </li>
+                <li className="flex items-start">
+                  <Gift className="h-6 w-6 text-purple-500 mr-3 mt-1" />
+                  <span>Premium Prompts Collection (Worth ₹1,500)</span>
+                </li>
+                <li className="flex items-start">
+                  <Gift className="h-6 w-6 text-purple-500 mr-3 mt-1" />
+                  <span>Workshop Recording Access (Worth ₹1,500)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </AnimatedElement>
+
+        {/* Mentor Section */}
+        <AnimatedElement delay={900} className="mt-20">
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 md:p-10">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
                 <h3 className="text-2xl font-bold mb-4">Meet Your Mentor</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Learn directly from an experienced filmmaker and AI creator who has helped hundreds of creators level up their visual storytelling.
+                <h4 className="text-xl font-semibold text-purple-400 mb-2">Prashaant C Raval</h4>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-justify">
+                Seasoned Industry Expert and Certified Professional from Autodesk & Adobe.
+With over 18 years of experience in the creative and design industries. An AI Filmmaker and a
+highly skilled artist, he has worked on a wide range of traditional national and international
+projects, delivering high-quality creative solutions across various domains. He has a deep
+passion for education and has shared his expertise with hundreds of students through his
+teaching roles in Institutes, Online Platforms, and Universities. His experience extends beyond
+the classroom, having conducted numerous Webinars and Seminars, where he empowers
+students and professionals alike with the latest industry trends and insights. With a strong
+background in both practical design and technical tools, he brings invaluable knowledge to the
+table, helping students build Real-world Skills. His courses are designed to provide hands-on
+learning, ensuring that students are well-equipped to meet the demands of the ever-evolving
+creative industry. Join Prashaant C Raval and learn from an industry professional dedicated to
+nurturing the next generation of creative talent
+AI Direction Visual Effects Storytelling Technical Innovation
                 </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {expertiseAreas.map((area, index) => (
+                    <div key={index} className="flex items-center bg-purple-500/10 rounded-full px-4 py-2">
+                      {area.icon}
+                      <span className="ml-2 text-sm font-medium">{area.text}</span>
+                    </div>
+                  ))}
+                </div>
                 <div className="flex items-center space-x-1 text-yellow-500 mb-4">
                   <Award className="h-5 w-5" />
                   <Award className="h-5 w-5" />
@@ -73,10 +216,10 @@ const Features = () => {
                   <Award className="h-5 w-5" />
                   <span className="ml-2 text-gray-600 dark:text-gray-300">5.0 Rating from 200+ Students</span>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                    <span>Filmmaker & Educator with 10+ years of experience</span>
+                    <span>Conducted numerous Webinars and Seminars on industry trends</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
@@ -86,13 +229,20 @@ const Features = () => {
                     <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
                     <span>Helped 1000+ students master video creation</span>
                   </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span>Experience in both national and international projects</span>
+                  </li>
                 </ul>
+                <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                  Join Prashaant and learn from an industry professional dedicated to nurturing the next generation of creative talent.
+                </p>
               </div>
               <div className="md:w-1/2">
                 <div className="relative overflow-hidden rounded-xl aspect-square">
                   <img 
                     src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                    alt="Workshop Mentor" 
+                    alt="Prashaant C Raval - Workshop Mentor" 
                     className="w-full h-full object-cover"
                   />
                 </div>
