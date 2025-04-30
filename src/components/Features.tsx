@@ -271,7 +271,7 @@ const Features = () => {
               <div className="md:w-1/2">
                 <div className="relative overflow-hidden rounded-xl aspect-square">
                   <img 
-                    src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    src="https://res.cloudinary.com/dshwmd54t/image/upload/v1745995954/Untitled_design_18_owl5ac.png" 
                     alt="Prashaant C Raval - Workshop Mentor" 
                     className="w-full h-full object-cover"
                   />
