@@ -3,7 +3,7 @@ import { AnimatedElement } from './AnimatePresence';
 
 const Bonuses = () => {
   return (
-    <section id="bonuses" className="py-20 relative overflow-hidden">
+    <section id="bonuses" className="py-8 relative overflow-hidden">
       {/* Animated gradient blob */}
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
       

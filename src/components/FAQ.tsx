@@ -97,14 +97,14 @@ const FAQ = () => {
             </div>
           </AnimatedElement>
 
-          <AnimatedElement delay={200} className="mt-8 text-center">
+          {/* <AnimatedElement delay={200} className="mt-8 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Still have questions? We're here to help!
             </p>
             <button className="px-6 py-2 bg-white/10 dark:bg-gray-800/30 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-gray-800/50 rounded-full font-medium transition-all">
               Contact Support
             </button>
-          </AnimatedElement>
+          </AnimatedElement> */}
         </div>
       </div>
     </section>

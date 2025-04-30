@@ -3,7 +3,7 @@ import { AnimatedElement } from './AnimatePresence';
 
 const Registration = () => {
   return (
-    <section id="register" className="py-20 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-gray-900/30">
+    <section id="register" className="py-12 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-gray-900/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <AnimatedElement>

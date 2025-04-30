@@ -1,46 +1,69 @@
-import { Film, Instagram, Twitter, Linkedin, Youtube, Facebook } from 'lucide-react';
+import { useEffect, useState } from "react";
 
-const Footer = () => {
+interface CountdownTime {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+const getTimeLeft = (targetDate: Date): CountdownTime => {
+  const now = new Date().getTime();
+  const distance = targetDate.getTime() - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
+
+  return {
+    days: days > 0 ? days : 0,
+    hours: hours > 0 ? hours : 0,
+    minutes: minutes > 0 ? minutes : 0,
+    seconds: seconds > 0 ? seconds : 0,
+  };
+};
+
+export default function FixedCountdownFooter() {
+  const [timeLeft, setTimeLeft] = useState<CountdownTime>(() =>
+    getTimeLeft(new Date("2025-05-01T23:59:59")) // set your own deadline
+  );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeLeft(new Date("2025-05-01T23:59:59")));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const { days, hours, minutes, seconds } = timeLeft;
+
   return (
-    <footer className="py-12 bg-gray-900">
+    <footer className="fixed bottom-0 left-0 right-0 w-full py-2 md:py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white z-50 shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center mb-6 md:mb-0">
-            <Film className="h-8 w-8 text-purple-500" strokeWidth={1.5} />
-            <span className="ml-2 text-xl font-bold">AI-Powered Filmmaking</span>
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="mb-2 md:mb-0 text-center md:text-left">
+            <h3 className="text-base md:text-lg font-bold">
+              DON'T MISS THE CHANCE TO GET THIS AMAZING OFFER TODAY
+            </h3>
           </div>
-          
-          <div className="flex space-x-4 mb-6 md:mb-0">
-            <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors" aria-label="Instagram">
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors" aria-label="Twitter">
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors" aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors" aria-label="YouTube">
-              <Youtube className="h-5 w-5" />
-            </a>
-            <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors" aria-label="Facebook">
-              <Facebook className="h-5 w-5" />
-            </a>
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <div className="flex space-x-1 md:space-x-2">
+              {[days, hours, minutes, seconds].map((unit, index) => (
+                <div
+                  key={index}
+                  className="bg-black text-white w-8 h-8 md:w-10 md:h-10 rounded-md flex items-center justify-center text-sm md:text-base font-bold shadow-lg"
+                >
+                  {unit.toString().padStart(2, "0")}
+                </div>
+              ))}
+            </div>
+            <button className="bg-black hover:bg-gray-900 text-white border-0 text-xs md:text-sm px-2 md:px-4 h-8 md:h-10 shadow-lg whitespace-nowrap rounded">
+              BUY NOW FOR ₹299/-
+            </button>
           </div>
-          
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} AI-Powered Filmmaking. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

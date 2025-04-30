@@ -34,7 +34,7 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <Film className="h-8 w-8 text-purple-500" strokeWidth={1.5} />
-          <span className="ml-2 text-xl font-bold">AI-Powered Filmmaking</span>
+          <span className="ml-2 text-xl font-bold">Aicourses4u</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
