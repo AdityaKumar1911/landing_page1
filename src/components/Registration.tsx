@@ -54,11 +54,11 @@ const Registration = () => {
                     </div>
                   </div>
                   
-                  <div className="p-4 bg-purple-900/20 rounded-lg mb-6">
+                  {/* <div className="p-4 bg-purple-900/20 rounded-lg mb-6">
                     <p className="text-sm text-purple-200">
                       <span className="font-bold">Note:</span> The workshop will be recorded and available for replay for a limited time for all registered participants.
                     </p>
-                  </div>
+                  </div> */}
                 </div>
                 
                 <div className="md:w-1/2">
@@ -83,11 +83,11 @@ const Registration = () => {
                     </p>
                   </div>
                   
-                  <div className="mt-6 p-4 bg-blue-900/20 rounded-lg">
+                  {/* <div className="mt-6 p-4 bg-blue-900/20 rounded-lg">
                     <p className="text-sm text-blue-200">
                       <span className="font-bold">100% Satisfaction Guarantee:</span> If you're not completely satisfied with the workshop, we'll refund your payment - no questions asked.
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

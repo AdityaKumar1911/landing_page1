@@ -51,18 +51,46 @@ const Features = () => {
         </AnimatedElement>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <AnimatedElement key={index} delay={100 * (index + 1)}>
-              <div className="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all hover:bg-white/10 dark:hover:bg-gray-800/80 h-full">
+  {features.map((feature, index) => {
+    // For first 3 items, render normally
+    if (index < 3) {
+      return (
+        <AnimatedElement key={index} delay={100 * (index + 1)}>
+          <div className="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all hover:bg-white/10 dark:hover:bg-gray-800/80 h-full">
+            <div className="w-12 h-12 flex items-center justify-center bg-purple-500/10 rounded-lg mb-6">
+              {feature.icon}
+            </div>
+            <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+            <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+          </div>
+        </AnimatedElement>
+      );
+    }
+
+    // For last 2 items, wrap them in a centered flex container
+    if (index === 3) {
+      return (
+        <div key="last-row" className="lg:col-span-3 flex justify-center gap-8">
+          {[features[3], features[4]].map((f, i) => (
+            <AnimatedElement key={i} delay={100 * (3 + i + 1)}>
+              <div className="bg-white/5 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all hover:bg-white/10 dark:hover:bg-gray-800/80 h-full w-full max-w-md">
                 <div className="w-12 h-12 flex items-center justify-center bg-purple-500/10 rounded-lg mb-6">
-                  {feature.icon}
+                  {f.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{f.description}</p>
               </div>
             </AnimatedElement>
           ))}
         </div>
+      );
+    }
+
+    return null;
+  })}
+</div>
+
+
 
         {/* Image Section */}
         <AnimatedElement delay={600} className="mt-20">
@@ -145,7 +173,7 @@ const Features = () => {
         </AnimatedElement>
 
         {/* Exclusive Bonuses Preview */}
-        <AnimatedElement delay={800} className="mt-20">
+        {/* <AnimatedElement delay={800} className="mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 relative overflow-hidden rounded-xl aspect-square">
               <img 
@@ -175,7 +203,7 @@ const Features = () => {
               </ul>
             </div>
           </div>
-        </AnimatedElement>
+        </AnimatedElement> */}
 
         {/* Mentor Section */}
         <AnimatedElement delay={900} className="mt-20">
@@ -185,21 +213,23 @@ const Features = () => {
                 <h3 className="text-2xl font-bold mb-4">Meet Your Mentor</h3>
                 <h4 className="text-xl font-semibold text-purple-400 mb-2">Prashaant C Raval</h4>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 text-justify">
-                Seasoned Industry Expert and Certified Professional from Autodesk & Adobe.
-With over 18 years of experience in the creative and design industries. An AI Filmmaker and a
-highly skilled artist, he has worked on a wide range of traditional national and international
-projects, delivering high-quality creative solutions across various domains. He has a deep
-passion for education and has shared his expertise with hundreds of students through his
-teaching roles in Institutes, Online Platforms, and Universities. His experience extends beyond
-the classroom, having conducted numerous Webinars and Seminars, where he empowers
-students and professionals alike with the latest industry trends and insights. With a strong
-background in both practical design and technical tools, he brings invaluable knowledge to the
-table, helping students build Real-world Skills. His courses are designed to provide hands-on
-learning, ensuring that students are well-equipped to meet the demands of the ever-evolving
-creative industry. Join Prashaant C Raval and learn from an industry professional dedicated to
-nurturing the next generation of creative talent
-AI Direction Visual Effects Storytelling Technical Innovation
-                </p>
+  Seasoned industry expert and certified professional from Autodesk & Adobe, 
+  Prashaant C Raval brings over 18 years of experience in the creative and design industries. 
+  As an AI filmmaker and highly skilled artist, he has contributed to a diverse range of national 
+  and international projects, delivering top-tier creative solutions across various domains.
+  <br /><br />
+  Prashaant is deeply passionate about education. He has mentored hundreds of students through 
+  institutes, universities, and online platforms. His experience extends beyond the classroom—he's 
+  conducted numerous webinars and seminars, sharing insights on the latest industry trends and tools.
+  <br /><br />
+  With a strong foundation in both artistic design and technical execution, he empowers learners 
+  to build real-world, future-ready skills. His hands-on, practical teaching approach ensures students 
+  are equipped to meet the evolving demands of the creative world.
+  <br /><br />
+  Join Prashaant C Raval and learn from a dedicated industry professional committed to nurturing 
+  the next generation of creative talent.
+</p>
+
                 <div className="flex flex-wrap gap-3 mb-6">
                   {expertiseAreas.map((area, index) => (
                     <div key={index} className="flex items-center bg-purple-500/10 rounded-full px-4 py-2">

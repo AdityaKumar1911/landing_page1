@@ -7,7 +7,7 @@ const Bonuses = () => {
       {/* Animated gradient blob */}
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      {/* <div className="container mx-auto px-4 relative z-10">
         <AnimatedElement>
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1 bg-purple-500/10 text-purple-500 dark:text-purple-400 rounded-full text-sm font-medium mb-4">Extra Value</span>
@@ -69,7 +69,7 @@ const Bonuses = () => {
             </div>
           </div>
         </AnimatedElement>
-      </div>
+      </div> */}
     </section>
   );
 };

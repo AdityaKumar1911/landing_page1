@@ -47,7 +47,7 @@ const FAQ = () => {
     },
     {
       question: "Will I get the recording?",
-      answer: "Yes, a recording will be available for a limited time for registered attendees. This allows you to review the content at your own pace or catch up if you miss any part of the live session."
+      answer: "We want to make this live and interactive. Therefore we will not provide recordings"
     },
     {
       question: "Is it really live and interactive?",
@@ -57,10 +57,10 @@ const FAQ = () => {
       question: "Can I join from mobile?",
       answer: "Yes, but for the best experience, a desktop/laptop is recommended. Some of the AI tools work better on larger screens, and you'll be able to follow along with the demonstrations more easily."
     },
-    {
-      question: "Will there be a certificate?",
-      answer: "A certificate will be provided to those who complete a short task post-workshop. This can be a great addition to your portfolio or resume if you're looking to showcase your AI video creation skills."
-    }
+    // {
+    //   question: "Will there be a certificate?",
+    //   answer: "A certificate will be provided to those who complete a short task post-workshop. This can be a great addition to your portfolio or resume if you're looking to showcase your AI video creation skills."
+    // }
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
