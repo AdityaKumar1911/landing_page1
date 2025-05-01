@@ -49,7 +49,7 @@ export default function FixedCountdownFooter() {
           </div>
           <div className="flex items-center space-x-2 md:space-x-4">
             <div className="flex space-x-1 md:space-x-2">
-              {[days, hours, minutes, seconds].map((unit, index) => (
+              {[ hours, minutes, seconds].map((unit, index) => (
                 <div
                   key={index}
                   className="bg-black text-white w-8 h-8 md:w-10 md:h-10 rounded-md flex items-center justify-center text-sm md:text-base font-bold shadow-lg"
