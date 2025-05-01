@@ -117,6 +117,25 @@ export default function WhyAttendSection() {
           </div>
         </div>
       </div>
+      {/* Bottom Image Gallery */}
+<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <img
+    src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800"
+    alt="Workshop Image 1"
+    className="w-full h-64 object-cover rounded-lg shadow-lg"
+  />
+  <img
+    src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=800"
+    alt="Workshop Image 2"
+    className="w-full h-64 object-cover rounded-lg shadow-lg"
+  />
+  <img
+    src="https://images.pexels.com/photos/3182747/pexels-photo-3182747.jpeg?auto=compress&cs=tinysrgb&w=800"
+    alt="Workshop Image 3"
+    className="w-full h-64 object-cover rounded-lg shadow-lg"
+  />
+</div>
+
     </section>
   );
 }
