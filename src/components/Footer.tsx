@@ -59,7 +59,7 @@ export default function FixedCountdownFooter() {
               ))}
             </div>
             <button className="bg-black hover:bg-gray-900 text-white border-0 text-xs md:text-sm px-2 md:px-4 h-8 md:h-10 shadow-lg whitespace-nowrap rounded">
-              BUY NOW FOR ₹299/-
+            Register Now
             </button>
           </div>
         </div>
