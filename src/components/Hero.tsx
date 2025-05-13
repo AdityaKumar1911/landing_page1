@@ -48,10 +48,19 @@ const Hero = () => {
           <AnimatedElement delay={500}>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button 
-                onClick={() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })}
+                // onClick={() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-full text-white font-medium text-lg transition-all shadow-lg hover:shadow-purple-500/20 transform hover:-translate-y-1"
               >
-                Register for ₹49 Only
+                <a 
+  href="https://rzp.io/rzp/wzSQUTG"
+  target="_blank"
+  rel="noopener noreferrer"
+  
+>
+Register for ₹49 Only
+</a>
+
+              
               </button>
               <button 
                 onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}

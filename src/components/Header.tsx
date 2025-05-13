@@ -53,12 +53,17 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
             {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
           
-          <button 
+        
+            <a 
+            href="https://rzp.io/rzp/wzSQUTG"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:block px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-full text-white font-medium transition-all shadow-lg hover:shadow-purple-500/20"
-            onClick={() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Register Now
-          </button>
+          </a>
+          
+        
           
           <button 
             className="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"

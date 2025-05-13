@@ -53,12 +53,6 @@ const Registration = () => {
                       </div>
                     </div>
                   </div>
-                  
-                  {/* <div className="p-4 bg-purple-900/20 rounded-lg mb-6">
-                    <p className="text-sm text-purple-200">
-                      <span className="font-bold">Note:</span> The workshop will be recorded and available for replay for a limited time for all registered participants.
-                    </p>
-                  </div> */}
                 </div>
                 
                 <div className="md:w-1/2">
@@ -75,19 +69,26 @@ const Registration = () => {
                   
                   <div className="space-y-4">
                     <button className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-xl text-white font-medium text-lg transition-all shadow-lg hover:shadow-purple-500/20 transform hover:-translate-y-1">
-                      Register for ₹49 Only
+                     
+                    <a 
+            href="https://rzp.io/rzp/wzSQUTG"
+            target="_blank"
+            rel="noopener noreferrer"
+            
+          >
+            Register for ₹49 Only
+          </a> 
                     </button>
-                    
+
                     <p className="text-center text-sm text-gray-500 dark:text-gray-400">
                       Secure payment via Razorpay
                     </p>
+
+                    <div className="mt-4 p-4 bg-yellow-500/10 border-l-4 border-yellow-400 rounded-md text-sm text-yellow-200">
+                      <p className="mb-2">🔔 <strong>Note:</strong> Once your payment is successful, you’ll get access to our <strong>Exclusive WhatsApp Community</strong>. All workshop updates, links, and important information will be shared there.</p>
+                      <p>✅ After completing the payment, <strong>don’t forget to join our WhatsApp community</strong> — all workshop communication will happen there!</p>
+                    </div>
                   </div>
-                  
-                  {/* <div className="mt-6 p-4 bg-blue-900/20 rounded-lg">
-                    <p className="text-sm text-blue-200">
-                      <span className="font-bold">100% Satisfaction Guarantee:</span> If you're not completely satisfied with the workshop, we'll refund your payment - no questions asked.
-                    </p>
-                  </div> */}
                 </div>
               </div>
             </div>
